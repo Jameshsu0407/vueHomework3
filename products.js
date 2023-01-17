@@ -60,9 +60,10 @@ createApp({
 				case "EDIT":
 					this.isNew = false;
 					this.tempProduct = JSON.parse(JSON.stringify(product));
-					if (this.tempProduct.imagesUrl == undefined) {
-						this.tempProduct.imagesUrl = [];
-					}
+					// if (this.tempProduct.imagesUrl == undefined) {
+					// 	this.tempProduct.imagesUrl = [];
+					// }
+					this.tempProduct.imagesUrl ??= [];
 					productModal.show();
 					break;
 				case "DELETE":
